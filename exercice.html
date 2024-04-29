@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body onload="fn1()">
+    <script>
+
+        function fn1(){
+            var x=prompt("entrer votre nom");
+            alert("bonjour"+x);
+        }
+        function calculer(){
+            var a=prompt("enter n1:");
+            var y=prompt("enter n2:");
+            var s=parseInt(a)+parseInt(y) ;
+            alert("somme =" +s);
+
+        }
+        function age(){
+            var ag=prompt("entre votre age : ");
+            if(ag<18){
+                alert("mineur");
+            }
+            else{
+                alert("majeur");
+            }
+        }
+        function fn2(){
+            alert("double click");
+        }
+function vl(){
+       
+     var sl = document.getElementById("v");
+     var slp = sl.options[sl.selectedIndex].text;
+     document.getElementById("op").innerText = slp;
+    
+    }
+    </script>
+    <button onclick="calculer()">calculer</button>
+    <button onclick="age()">age</button>
+    <button ondblclick="fn2()">click</button>
+
+    <select name="v" id="v" onchange="vl()">
+   <option value="bmw">bmw</option>
+   <option value="kia">kia</option>
+   <option value="hyundai">hyundai</option>
+   <option value="jeep">jeep</option>
+    </select>
+    <p>La voiture choisie est : <span id="op"></span></p>
+
+</body>
+</html>
